@@ -2,3 +2,33 @@ h1 {
 text-align: center;
 color:purple
 }
+
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    text-align: left;
+  }
+  .weather-app {
+    border: 1px solid #ddfd;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 20px;
+    max-width: 500px;
+  }
+  .text-center {
+    margin: 40px;
+    color: rgb(226, 58, 72);
+    padding-inline-end: 10px;
+  }
+  
+  .container {
+    border: 1px solid #463535;
+    padding: 15px;
+    margin: 20px;
+    max-width: 630px;
+    border-radius: 20px;
+    background-color: rgb(247, 152, 242);
+  }
