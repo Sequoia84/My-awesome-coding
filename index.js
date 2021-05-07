@@ -29,6 +29,10 @@ function formatDate(date) {
       response.data.main.temp
     );
   
+    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+    document.querySelector("#wind").innerHTML = Math.round(
+      response.data.wind.speed
+    );
     document.querySelector("#description").innerHTML =
       response.data.weather[0].main;
   }
@@ -47,7 +51,9 @@ function formatDate(date) {
   
   function searchLocation(position) {
     let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${
+      position.coords.latitude
+    }&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   
     axios.get(apiUrl).then(displayWeatherCondition);
   }
@@ -55,6 +61,18 @@ function formatDate(date) {
   function getCurrentLocation(event) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+  
+  function convertToFahrenheit(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = 66;
+  }
+  
+  function convertToCelsius(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = 19;
   }
   
   let dateElement = document.querySelector("#date");
@@ -67,4 +85,4 @@ function formatDate(date) {
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", getCurrentLocation);
   
-  searchCity("San Fernanado");
+  searchCity("Sylmar");
