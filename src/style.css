@@ -1,5 +1,5 @@
 h1 {
-    color: rgb(238, 70, 168);
+    color: rgb(80, 224, 169);
   }
   ul {
     margin: 0;
@@ -18,7 +18,7 @@ h1 {
   }
   .text-center {
     margin: 40px;
-    color: rgb(226, 58, 72);
+    color: rgb(224, 46, 156);
     padding-inline-end: 10px;
   }
   
@@ -28,6 +28,6 @@ h1 {
     margin: 20px;
     max-width: 630px;
     border-radius: 20px;
-    background-color: rgb(92, 241, 197);
+    background-color: rgb(71, 213, 231);
   }
   
